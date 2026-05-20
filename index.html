@@ -230,53 +230,18 @@ textarea::placeholder{color:var(--text3)}
   <div class="panel" id="panel-2">
     <div class="info-banner">
       <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-      Envie ementas, planos de ensino, referências ou materiais de apoio à decisão curricular.
+      Envie ementas, planos de ensino, referências ou materiais de apoio à decisão curricular diretamente no Google Drive da comissão.
     </div>
 
-    <div class="card">
-      <p class="sect-label">Identificação (opcional)</p>
-      <div class="grid-2">
-        <div>
-          <p class="field-label">Nome</p>
-          <input type="text" id="nome-up" placeholder="Seu nome">
-        </div>
-        <div>
-          <p class="field-label">Curso / área</p>
-          <input type="text" id="curso-up" placeholder="Ex.: Ambiental 2024.1">
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <p class="sect-label">Tipo de material</p>
-      <div class="tags" style="margin-bottom:1.25rem">
-        <button class="tag" onclick="toggleTag(this)">Ementa</button>
-        <button class="tag" onclick="toggleTag(this)">Plano de ensino</button>
-        <button class="tag" onclick="toggleTag(this)">Referências bibliográficas</button>
-        <button class="tag" onclick="toggleTag(this)">Artigo / texto base</button>
-        <button class="tag" onclick="toggleTag(this)">Outro</button>
-      </div>
-
-      <p class="field-label" style="margin-bottom:10px">Arquivo(s)</p>
-      <div class="drop-zone" id="drop-zone" onclick="document.getElementById('file-input').click()" ondragover="dragOver(event)" ondragleave="dragLeave()" ondrop="dropFile(event)">
-        <svg class="drop-icon" viewBox="0 0 24 24"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0018 9h-1.26A8 8 0 103 16.3"/></svg>
-        <p class="drop-title">Clique para selecionar ou arraste aqui</p>
-        <p class="drop-sub">PDF, DOCX, XLSX, JPG, PNG — máx. 10 MB por arquivo</p>
-      </div>
-      <input type="file" id="file-input" multiple accept=".pdf,.doc,.docx,.xls,.xlsx,.jpg,.jpeg,.png" style="display:none" onchange="addFiles(this.files)">
-      <div class="file-list" id="file-list"></div>
-
-      <p class="field-label">Observações</p>
-      <textarea id="obs-up" placeholder="Referente a qual disciplina? Como este material contribui para a decisão..."></textarea>
-    </div>
-
-    <button class="btn" onclick="submitUpload()">
-      <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-      Confirmar envio
-    </button>
-    <div class="toast" id="ok-up">
-      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-      <span id="ok-up-msg">Arquivos recebidos com sucesso!</span>
+    <div class="card" style="text-align:center;padding:2.5rem 1.5rem">
+      <svg viewBox="0 0 24 24" style="width:48px;height:48px;stroke:var(--accent);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;margin:0 auto 1rem;display:block"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0018 9h-1.26A8 8 0 103 16.3"/></svg>
+      <p style="font-size:16px;font-weight:600;color:var(--text);margin-bottom:.5rem">Enviar arquivo para o Drive</p>
+      <p style="font-size:13px;color:var(--text2);margin-bottom:1.5rem;line-height:1.6">Clique no botão abaixo para acessar a pasta compartilhada da comissão curricular e fazer o upload do seu material (ementas, planos de ensino, referências, artigos, etc.).</p>
+      <a href="https://drive.google.com/drive/folders/11C-9y5916vqZKpcZEplKJfeXhoLjdTpk?usp=sharing" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;text-decoration:none;padding:12px 24px;border-radius:var(--radius);font-size:15px;font-weight:600;font-family:'DM Sans',sans-serif;transition:all .18s" onmouseover="this.style.background='#235A3C'" onmouseout="this.style.background='var(--accent)'">
+        <svg viewBox="0 0 24 24" style="width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0018 9h-1.26A8 8 0 103 16.3"/></svg>
+        Abrir pasta no Google Drive
+      </a>
+      <p style="font-size:12px;color:var(--text3);margin-top:1rem">Abre em nova aba — faça login com sua conta Google para enviar</p>
     </div>
   </div>
 
